@@ -12,16 +12,14 @@ namespace TreehouseDefense
             this.y = y;
         }
 
-        public double DistanceTo(int x, int y)
+        public int DistanceTo(int x, int y)
         {
-            int xDiff = this.x - x;
-            int yDiff = this.y - y;
+            return (int)Math.Sqrt(Math.Pow(this.x - x, 2) + Math.Pow(this.y - y, 2));
+        }
 
-            int xDiffSquared = xDiff * xDiff;
-            int yDiffSquared = yDiff * yDiff;
-
-            return Math.Sqrt((double)(xDiffSquared + yDiffSquared));
-
+        public int DistanceTo(Point other)
+        {
+            return this.DistanceTo(other.x, other.y);
         }
     }
 }
