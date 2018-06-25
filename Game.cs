@@ -9,7 +9,17 @@ namespace TreehouseDefense
             Map map = new Map(8, 5);
             try
             {
-                Point x = new MapLocation(7, 6, map);    
+                Path path = new Path(new [] {
+                    new MapLocation(0, 2, map),
+                    new MapLocation(1, 2, map),
+                    new MapLocation(2, 2, map),
+                    new MapLocation(3, 2, map),
+                    new MapLocation(4, 2, map),
+                    new MapLocation(5, 2, map),
+                    new MapLocation(6, 2, map),
+                    new MapLocation(7, 2, map)
+                });
+
             }
             catch(OutOfBoundsException ex)
             {
@@ -19,9 +29,10 @@ namespace TreehouseDefense
             {
                 Console.WriteLine("Unhandles TreehouseDefenseException");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Unhandles Exception");
+                Console.WriteLine("Unhandles Exception: " + ex);
+
             }
 
             // Point y = new MapLocation(7, 6, map); 
