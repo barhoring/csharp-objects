@@ -9,5 +9,9 @@ namespace TreehouseDefense
                 throw new OutOfBoundsException(x + "," + y +  " oops... this point is not on the map");
             }
         }
+
+        public bool InRangeOf(MapLocation location, int range){
+            return this.DistanceTo(location) <= range;
+        }
     }
 }

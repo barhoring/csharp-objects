@@ -2,9 +2,23 @@ namespace TreehouseDefense
 {
     class Tower
     {
-        public void Main()
+        private readonly MapLocation _location;
+        private const int _range = 1;
+        private const int _power = 1; 
+        public Tower(MapLocation location)
         {
-            Tower tower = new Tower();
+            _location = location;
+        }
+
+        public void FireOnInvadors(Invador[] invaders)
+        {
+            foreach(Invader invader in invader){
+                Invader invader = invaders[i];
+                if(invader.IsActive && _location.InRangeOf(invader.location, _range)){
+                    invader.DecreaseHealth(_power);
+                    break;
+                }
+            }
         }
     } 
 }

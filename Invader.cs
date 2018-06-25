@@ -11,7 +11,7 @@ namespace TreehouseDefense
 
         public bool HasScored => _pathStep >= _path.Length;
         public bool IsNeutralized => health <= 0;
-        public bool isActive => !(IsNeutralized || HasScored);
+        public bool IsActive => !(IsNeutralized || HasScored);
 
         public int health { get; private set; } = 2;
 
