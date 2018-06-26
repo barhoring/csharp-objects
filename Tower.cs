@@ -12,9 +12,8 @@ namespace TreehouseDefense
 
         public void FireOnInvadors(Invader[] invaders)
         {
-            foreach(Invader invader in invader){
-                Invader invader = invaders[i];
-                if(invader.IsActive && _location.InRangeOf(invader.location, _range)){
+            foreach(Invader invader in invaders){
+                if(invader.IsActive && _location.InRangeOf(invader.Location, _range)){
                     invader.DecreaseHealth(_power);
                     break;
                 }

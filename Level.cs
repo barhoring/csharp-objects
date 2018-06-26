@@ -27,6 +27,7 @@ namespace TreehouseDefense
                 
                 // count and move the invaders that are still active
                 remaniningInvaders = 0;
+                
                 foreach(Invader invader in _invaders){
                     if(invader.IsActive){
                         invader.Move();
