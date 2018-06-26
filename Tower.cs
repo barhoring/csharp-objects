@@ -10,7 +10,7 @@ namespace TreehouseDefense
             _location = location;
         }
 
-        public void FireOnInvadors(Invador[] invaders)
+        public void FireOnInvadors(Invader[] invaders)
         {
             foreach(Invader invader in invader){
                 Invader invader = invaders[i];
